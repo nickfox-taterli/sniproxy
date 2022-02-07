@@ -11,6 +11,7 @@
 - [x] 支持动态更改母鸡IPv4/IPv6并自动重新加载配置文件.
 - [x] 可手动编辑重写名单,支持双栈重写.
 - [x] 高级功能由GNET提供,此处懒得写.
+- [x] 可以设置管理密码.
 
 ---
 
@@ -20,6 +21,7 @@
 docker run -d \
 --network=host \
 --restart unless-stopped \
+-e PASSWORD=xxoo \
 taterli/sniproxy
 ```
 

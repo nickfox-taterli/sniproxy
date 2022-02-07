@@ -3,7 +3,7 @@ FROM debian:bullseye
 RUN apt-get update \
 	&& apt-get install --no-install-recommends --no-install-suggests -y \
 						ca-certificates \
-						libcap2-bin sniproxy curl psmisc \
+						libcap2-bin sniproxy curl psmisc apache2-utils \
 	&& rm -rf /var/lib/apt/lists/*
 
 COPY --chown=nobody:nogroup ./AdGuardHome /opt/AdGuardHome
