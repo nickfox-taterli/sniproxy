@@ -1,0 +1,497 @@
+bind_host: 0.0.0.0
+bind_port: 8080
+beta_bind_port: 0
+users:
+- name: admin
+  password: $2a$10$UL51kOUMX6uwmI1y8ddCje.5IQ0.FM4aeTbjC5n3N8Vu9QFZnX.Qq
+auth_attempts: 5
+block_auth_min: 15
+http_proxy: ""
+language: ""
+debug_pprof: false
+web_session_ttl: 720
+dns:
+  bind_hosts:
+  - 0.0.0.0
+  port: 53
+  statistics_interval: 1
+  querylog_enabled: true
+  querylog_file_enabled: true
+  querylog_interval: 2160h
+  querylog_size_memory: 1000
+  anonymize_client_ip: false
+  protection_enabled: true
+  blocking_mode: default
+  blocking_ipv4: ""
+  blocking_ipv6: ""
+  blocked_response_ttl: 10
+  parental_block_host: family-block.dns.adguard.com
+  safebrowsing_block_host: standard-block.dns.adguard.com
+  ratelimit: 20
+  ratelimit_whitelist: []
+  refuse_any: true
+  upstream_dns:
+  - https://dns10.quad9.net/dns-query
+  upstream_dns_file: ""
+  bootstrap_dns:
+  - 9.9.9.10
+  - 149.112.112.10
+  - 2620:fe::10
+  - 2620:fe::fe:10
+  all_servers: false
+  fastest_addr: false
+  fastest_timeout: 1s
+  allowed_clients: []
+  disallowed_clients: []
+  blocked_hosts:
+  - version.bind
+  - id.server
+  - hostname.bind
+  trusted_proxies:
+  - 127.0.0.0/8
+  - ::1/128
+  cache_size: 4194304
+  cache_ttl_min: 0
+  cache_ttl_max: 0
+  cache_optimistic: false
+  bogus_nxdomain: []
+  aaaa_disabled: false
+  enable_dnssec: false
+  edns_client_subnet: false
+  max_goroutines: 300
+  ipset: []
+  filtering_enabled: true
+  filters_update_interval: 24
+  parental_enabled: false
+  safesearch_enabled: false
+  safebrowsing_enabled: false
+  safebrowsing_cache_size: 1048576
+  safesearch_cache_size: 1048576
+  parental_cache_size: 1048576
+  cache_time: 30
+  rewrites:
+  - domain: '*.bamgrid.com'
+    answer: 203.0.113.0
+  - domain: '*.bamgrid.com'
+    answer: 2001:db8:ffff:ffff:ffff:ffff:ffff:ffff
+  - domain: '*.disneyplus.com'
+    answer: 203.0.113.0
+  - domain: '*.disneyplus.com'
+    answer: 2001:db8:ffff:ffff:ffff:ffff:ffff:ffff
+  - domain: '*.akadns.net'
+    answer: 203.0.113.0
+  - domain: '*.akadns.net'
+    answer: 2001:db8:ffff:ffff:ffff:ffff:ffff:ffff
+  - domain: '*.akam.net'
+    answer: 203.0.113.0
+  - domain: '*.akam.net'
+    answer: 2001:db8:ffff:ffff:ffff:ffff:ffff:ffff
+  - domain: '*.akamai.com'
+    answer: 203.0.113.0
+  - domain: '*.akamai.com'
+    answer: 2001:db8:ffff:ffff:ffff:ffff:ffff:ffff
+  - domain: '*.akamai.net'
+    answer: 203.0.113.0
+  - domain: '*.akamai.net'
+    answer: 2001:db8:ffff:ffff:ffff:ffff:ffff:ffff
+  - domain: '*.akamaiedge.net'
+    answer: 203.0.113.0
+  - domain: '*.akamaiedge.net'
+    answer: 2001:db8:ffff:ffff:ffff:ffff:ffff:ffff
+  - domain: '*.akamaihd.net'
+    answer: 203.0.113.0
+  - domain: '*.akamaihd.net'
+    answer: 2001:db8:ffff:ffff:ffff:ffff:ffff:ffff
+  - domain: '*.akamaistream.net'
+    answer: 203.0.113.0
+  - domain: '*.akamaistream.net'
+    answer: 2001:db8:ffff:ffff:ffff:ffff:ffff:ffff
+  - domain: '*.akamaitech.net'
+    answer: 203.0.113.0
+  - domain: '*.akamaitech.net'
+    answer: 2001:db8:ffff:ffff:ffff:ffff:ffff:ffff
+  - domain: '*.akamaitechnologies.com'
+    answer: 203.0.113.0
+  - domain: '*.akamaitechnologies.com'
+    answer: 2001:db8:ffff:ffff:ffff:ffff:ffff:ffff
+  - domain: '*.akamaitechnologies.fr'
+    answer: 203.0.113.0
+  - domain: '*.akamaitechnologies.fr'
+    answer: 2001:db8:ffff:ffff:ffff:ffff:ffff:ffff
+  - domain: '*.akamaized.net'
+    answer: 203.0.113.0
+  - domain: '*.akamaized.net'
+    answer: 2001:db8:ffff:ffff:ffff:ffff:ffff:ffff
+  - domain: '*.edgekey.net'
+    answer: 203.0.113.0
+  - domain: '*.edgekey.net'
+    answer: 2001:db8:ffff:ffff:ffff:ffff:ffff:ffff
+  - domain: '*.edgesuite.net'
+    answer: 203.0.113.0
+  - domain: '*.edgesuite.net'
+    answer: 2001:db8:ffff:ffff:ffff:ffff:ffff:ffff
+  - domain: '*.srip.net'
+    answer: 203.0.113.0
+  - domain: '*.srip.net'
+    answer: 2001:db8:ffff:ffff:ffff:ffff:ffff:ffff
+  - domain: '*.footprint.net'
+    answer: 203.0.113.0
+  - domain: '*.footprint.net'
+    answer: 2001:db8:ffff:ffff:ffff:ffff:ffff:ffff
+  - domain: '*.level3.net'
+    answer: 203.0.113.0
+  - domain: '*.level3.net'
+    answer: 2001:db8:ffff:ffff:ffff:ffff:ffff:ffff
+  - domain: '*.llnwd.net'
+    answer: 203.0.113.0
+  - domain: '*.llnwd.net'
+    answer: 2001:db8:ffff:ffff:ffff:ffff:ffff:ffff
+  - domain: '*.edgecastcdn.net'
+    answer: 203.0.113.0
+  - domain: '*.edgecastcdn.net'
+    answer: 2001:db8:ffff:ffff:ffff:ffff:ffff:ffff
+  - domain: '*.cloudfront.net'
+    answer: 203.0.113.0
+  - domain: '*.cloudfront.net'
+    answer: 2001:db8:ffff:ffff:ffff:ffff:ffff:ffff
+  - domain: '*.netflix.com'
+    answer: 203.0.113.0
+  - domain: '*.netflix.com'
+    answer: 2001:db8:ffff:ffff:ffff:ffff:ffff:ffff
+  - domain: '*.netflix.net'
+    answer: 203.0.113.0
+  - domain: '*.netflix.net'
+    answer: 2001:db8:ffff:ffff:ffff:ffff:ffff:ffff
+  - domain: '*.nflximg.net'
+    answer: 203.0.113.0
+  - domain: '*.nflximg.net'
+    answer: 2001:db8:ffff:ffff:ffff:ffff:ffff:ffff
+  - domain: '*.nflxvideo.net'
+    answer: 203.0.113.0
+  - domain: '*.nflxvideo.net'
+    answer: 2001:db8:ffff:ffff:ffff:ffff:ffff:ffff
+  - domain: '*.nflxso.net'
+    answer: 203.0.113.0
+  - domain: '*.nflxso.net'
+    answer: 2001:db8:ffff:ffff:ffff:ffff:ffff:ffff
+  - domain: '*.nflxext.com'
+    answer: 203.0.113.0
+  - domain: '*.nflxext.com'
+    answer: 2001:db8:ffff:ffff:ffff:ffff:ffff:ffff
+  - domain: '*.hulu.com'
+    answer: 203.0.113.0
+  - domain: '*.hulu.com'
+    answer: 2001:db8:ffff:ffff:ffff:ffff:ffff:ffff
+  - domain: '*.huluim.com'
+    answer: 203.0.113.0
+  - domain: '*.huluim.com'
+    answer: 2001:db8:ffff:ffff:ffff:ffff:ffff:ffff
+  - domain: '*.hbonow.com'
+    answer: 203.0.113.0
+  - domain: '*.hbonow.com'
+    answer: 2001:db8:ffff:ffff:ffff:ffff:ffff:ffff
+  - domain: '*.hbogo.com'
+    answer: 203.0.113.0
+  - domain: '*.hbogo.com'
+    answer: 2001:db8:ffff:ffff:ffff:ffff:ffff:ffff
+  - domain: '*.hbo.com'
+    answer: 203.0.113.0
+  - domain: '*.hbo.com'
+    answer: 2001:db8:ffff:ffff:ffff:ffff:ffff:ffff
+  - domain: '*.amazon.com'
+    answer: 203.0.113.0
+  - domain: '*.amazon.com'
+    answer: 2001:db8:ffff:ffff:ffff:ffff:ffff:ffff
+  - domain: '*.amazon.co.uk'
+    answer: 203.0.113.0
+  - domain: '*.amazon.co.uk'
+    answer: 2001:db8:ffff:ffff:ffff:ffff:ffff:ffff
+  - domain: '*.amazonvideo.com'
+    answer: 203.0.113.0
+  - domain: '*.amazonvideo.com'
+    answer: 2001:db8:ffff:ffff:ffff:ffff:ffff:ffff
+  - domain: '*.crackle.com'
+    answer: 203.0.113.0
+  - domain: '*.crackle.com'
+    answer: 2001:db8:ffff:ffff:ffff:ffff:ffff:ffff
+  - domain: '*.pandora.com'
+    answer: 203.0.113.0
+  - domain: '*.pandora.com'
+    answer: 2001:db8:ffff:ffff:ffff:ffff:ffff:ffff
+  - domain: '*.vudu.com'
+    answer: 203.0.113.0
+  - domain: '*.vudu.com'
+    answer: 2001:db8:ffff:ffff:ffff:ffff:ffff:ffff
+  - domain: '*.blinkbox.com'
+    answer: 203.0.113.0
+  - domain: '*.blinkbox.com'
+    answer: 2001:db8:ffff:ffff:ffff:ffff:ffff:ffff
+  - domain: '*.abc.com'
+    answer: 203.0.113.0
+  - domain: '*.abc.com'
+    answer: 2001:db8:ffff:ffff:ffff:ffff:ffff:ffff
+  - domain: '*.fox.com'
+    answer: 203.0.113.0
+  - domain: '*.fox.com'
+    answer: 2001:db8:ffff:ffff:ffff:ffff:ffff:ffff
+  - domain: '*.theplatform.com'
+    answer: 203.0.113.0
+  - domain: '*.theplatform.com'
+    answer: 2001:db8:ffff:ffff:ffff:ffff:ffff:ffff
+  - domain: '*.nbc.com'
+    answer: 203.0.113.0
+  - domain: '*.nbc.com'
+    answer: 2001:db8:ffff:ffff:ffff:ffff:ffff:ffff
+  - domain: '*.nbcuni.com'
+    answer: 203.0.113.0
+  - domain: '*.nbcuni.com'
+    answer: 2001:db8:ffff:ffff:ffff:ffff:ffff:ffff
+  - domain: '*.ip2location.com'
+    answer: 203.0.113.0
+  - domain: '*.ip2location.com'
+    answer: 2001:db8:ffff:ffff:ffff:ffff:ffff:ffff
+  - domain: '*.pbs.org'
+    answer: 203.0.113.0
+  - domain: '*.pbs.org'
+    answer: 2001:db8:ffff:ffff:ffff:ffff:ffff:ffff
+  - domain: '*.warnerbros.com'
+    answer: 203.0.113.0
+  - domain: '*.warnerbros.com'
+    answer: 2001:db8:ffff:ffff:ffff:ffff:ffff:ffff
+  - domain: '*.southpark.cc.com'
+    answer: 203.0.113.0
+  - domain: '*.southpark.cc.com'
+    answer: 2001:db8:ffff:ffff:ffff:ffff:ffff:ffff
+  - domain: '*.cbs.com'
+    answer: 203.0.113.0
+  - domain: '*.cbs.com'
+    answer: 2001:db8:ffff:ffff:ffff:ffff:ffff:ffff
+  - domain: '*.brightcove.com'
+    answer: 203.0.113.0
+  - domain: '*.brightcove.com'
+    answer: 2001:db8:ffff:ffff:ffff:ffff:ffff:ffff
+  - domain: '*.cwtv.com'
+    answer: 203.0.113.0
+  - domain: '*.cwtv.com'
+    answer: 2001:db8:ffff:ffff:ffff:ffff:ffff:ffff
+  - domain: '*.spike.com'
+    answer: 203.0.113.0
+  - domain: '*.spike.com'
+    answer: 2001:db8:ffff:ffff:ffff:ffff:ffff:ffff
+  - domain: '*.go.com'
+    answer: 203.0.113.0
+  - domain: '*.go.com'
+    answer: 2001:db8:ffff:ffff:ffff:ffff:ffff:ffff
+  - domain: '*.mtv.com'
+    answer: 203.0.113.0
+  - domain: '*.mtv.com'
+    answer: 2001:db8:ffff:ffff:ffff:ffff:ffff:ffff
+  - domain: '*.mtvnservices.com'
+    answer: 203.0.113.0
+  - domain: '*.mtvnservices.com'
+    answer: 2001:db8:ffff:ffff:ffff:ffff:ffff:ffff
+  - domain: '*.playstation.net'
+    answer: 203.0.113.0
+  - domain: '*.playstation.net'
+    answer: 2001:db8:ffff:ffff:ffff:ffff:ffff:ffff
+  - domain: '*.uplynk.com'
+    answer: 203.0.113.0
+  - domain: '*.uplynk.com'
+    answer: 2001:db8:ffff:ffff:ffff:ffff:ffff:ffff
+  - domain: '*.maxmind.com'
+    answer: 203.0.113.0
+  - domain: '*.maxmind.com'
+    answer: 2001:db8:ffff:ffff:ffff:ffff:ffff:ffff
+  - domain: '*.disney.com'
+    answer: 203.0.113.0
+  - domain: '*.disney.com'
+    answer: 2001:db8:ffff:ffff:ffff:ffff:ffff:ffff
+  - domain: '*.disneyjunior.com'
+    answer: 203.0.113.0
+  - domain: '*.disneyjunior.com'
+    answer: 2001:db8:ffff:ffff:ffff:ffff:ffff:ffff
+  - domain: '*.xboxlive.com'
+    answer: 203.0.113.0
+  - domain: '*.xboxlive.com'
+    answer: 2001:db8:ffff:ffff:ffff:ffff:ffff:ffff
+  - domain: '*.lovefilm.com'
+    answer: 203.0.113.0
+  - domain: '*.lovefilm.com'
+    answer: 2001:db8:ffff:ffff:ffff:ffff:ffff:ffff
+  - domain: '*.turner.com'
+    answer: 203.0.113.0
+  - domain: '*.turner.com'
+    answer: 2001:db8:ffff:ffff:ffff:ffff:ffff:ffff
+  - domain: '*.amctv.com'
+    answer: 203.0.113.0
+  - domain: '*.amctv.com'
+    answer: 2001:db8:ffff:ffff:ffff:ffff:ffff:ffff
+  - domain: '*.sho.com'
+    answer: 203.0.113.0
+  - domain: '*.sho.com'
+    answer: 2001:db8:ffff:ffff:ffff:ffff:ffff:ffff
+  - domain: '*.mog.com'
+    answer: 203.0.113.0
+  - domain: '*.mog.com'
+    answer: 2001:db8:ffff:ffff:ffff:ffff:ffff:ffff
+  - domain: '*.wdtvlive.com'
+    answer: 203.0.113.0
+  - domain: '*.wdtvlive.com'
+    answer: 2001:db8:ffff:ffff:ffff:ffff:ffff:ffff
+  - domain: '*.beinsportsconnect.tv'
+    answer: 203.0.113.0
+  - domain: '*.beinsportsconnect.tv'
+    answer: 2001:db8:ffff:ffff:ffff:ffff:ffff:ffff
+  - domain: '*.beinsportsconnect.net'
+    answer: 203.0.113.0
+  - domain: '*.beinsportsconnect.net'
+    answer: 2001:db8:ffff:ffff:ffff:ffff:ffff:ffff
+  - domain: '*.fig.bbc.co.uk'
+    answer: 203.0.113.0
+  - domain: '*.fig.bbc.co.uk'
+    answer: 2001:db8:ffff:ffff:ffff:ffff:ffff:ffff
+  - domain: '*.open.live.bbc.co.uk'
+    answer: 203.0.113.0
+  - domain: '*.open.live.bbc.co.uk'
+    answer: 2001:db8:ffff:ffff:ffff:ffff:ffff:ffff
+  - domain: '*.sa.bbc.co.uk'
+    answer: 203.0.113.0
+  - domain: '*.sa.bbc.co.uk'
+    answer: 2001:db8:ffff:ffff:ffff:ffff:ffff:ffff
+  - domain: '*.www.bbc.co.uk'
+    answer: 203.0.113.0
+  - domain: '*.www.bbc.co.uk'
+    answer: 2001:db8:ffff:ffff:ffff:ffff:ffff:ffff
+  - domain: '*.crunchyroll.com'
+    answer: 203.0.113.0
+  - domain: '*.crunchyroll.com'
+    answer: 2001:db8:ffff:ffff:ffff:ffff:ffff:ffff
+  - domain: '*.ifconfig.co'
+    answer: 203.0.113.0
+  - domain: '*.ifconfig.co'
+    answer: 2001:db8:ffff:ffff:ffff:ffff:ffff:ffff
+  - domain: '*.omtrdc.net'
+    answer: 203.0.113.0
+  - domain: '*.omtrdc.net'
+    answer: 2001:db8:ffff:ffff:ffff:ffff:ffff:ffff
+  - domain: '*.sling.com'
+    answer: 203.0.113.0
+  - domain: '*.sling.com'
+    answer: 2001:db8:ffff:ffff:ffff:ffff:ffff:ffff
+  - domain: '*.movetv.com'
+    answer: 203.0.113.0
+  - domain: '*.movetv.com'
+    answer: 2001:db8:ffff:ffff:ffff:ffff:ffff:ffff
+  - domain: '*.happyon.jp'
+    answer: 203.0.113.0
+  - domain: '*.happyon.jp'
+    answer: 2001:db8:ffff:ffff:ffff:ffff:ffff:ffff
+  - domain: '*.abema.tv'
+    answer: 203.0.113.0
+  - domain: '*.abema.tv'
+    answer: 2001:db8:ffff:ffff:ffff:ffff:ffff:ffff
+  - domain: '*.hulu.jp'
+    answer: 203.0.113.0
+  - domain: '*.hulu.jp'
+    answer: 2001:db8:ffff:ffff:ffff:ffff:ffff:ffff
+  - domain: '*.optus.com.au'
+    answer: 203.0.113.0
+  - domain: '*.optus.com.au'
+    answer: 2001:db8:ffff:ffff:ffff:ffff:ffff:ffff
+  - domain: '*.optusnet.com.au'
+    answer: 203.0.113.0
+  - domain: '*.optusnet.com.au'
+    answer: 2001:db8:ffff:ffff:ffff:ffff:ffff:ffff
+  - domain: '*.gamer.com.tw'
+    answer: 203.0.113.0
+  - domain: '*.gamer.com.tw'
+    answer: 2001:db8:ffff:ffff:ffff:ffff:ffff:ffff
+  - domain: '*.bahamut.com.tw'
+    answer: 203.0.113.0
+  - domain: '*.bahamut.com.tw'
+    answer: 2001:db8:ffff:ffff:ffff:ffff:ffff:ffff
+  - domain: '*.hinet.net'
+    answer: 203.0.113.0
+  - domain: '*.hinet.net'
+    answer: 2001:db8:ffff:ffff:ffff:ffff:ffff:ffff
+  - domain: '*.googleapis.com'
+    answer: 203.0.113.0
+  - domain: '*.googleapis.com'
+    answer: 2001:db8:ffff:ffff:ffff:ffff:ffff:ffff
+  - domain: '*.google.com'
+    answer: 203.0.113.0
+  - domain: '*.google.com'
+    answer: 2001:db8:ffff:ffff:ffff:ffff:ffff:ffff
+  - domain: '*.youtube.com'
+    answer: 203.0.113.0
+  - domain: '*.youtube.com'
+    answer: 2001:db8:ffff:ffff:ffff:ffff:ffff:ffff
+  - domain: '*.googleadservices.com'
+    answer: 203.0.113.0
+  - domain: '*.googleadservices.com'
+    answer: 2001:db8:ffff:ffff:ffff:ffff:ffff:ffff
+  - domain: '*.ggpht.com'
+    answer: 203.0.113.0
+  - domain: '*.ggpht.com'
+    answer: 2001:db8:ffff:ffff:ffff:ffff:ffff:ffff
+  blocked_services: []
+  upstream_timeout: 10s
+  local_domain_name: lan
+  resolve_clients: true
+  use_private_ptr_resolvers: true
+  local_ptr_upstreams: []
+tls:
+  enabled: false
+  server_name: ""
+  force_https: false
+  port_https: 443
+  port_dns_over_tls: 853
+  port_dns_over_quic: 784
+  port_dnscrypt: 0
+  dnscrypt_config_file: ""
+  allow_unencrypted_doh: false
+  strict_sni_check: false
+  certificate_chain: ""
+  private_key: ""
+  certificate_path: ""
+  private_key_path: ""
+filters:
+- enabled: true
+  url: https://adguardteam.github.io/AdGuardSDNSFilter/Filters/filter.txt
+  name: AdGuard DNS filter
+  id: 1
+- enabled: false
+  url: https://adaway.org/hosts.txt
+  name: AdAway Default Blocklist
+  id: 2
+whitelist_filters: []
+user_rules: []
+dhcp:
+  enabled: false
+  interface_name: ""
+  dhcpv4:
+    gateway_ip: ""
+    subnet_mask: ""
+    range_start: ""
+    range_end: ""
+    lease_duration: 86400
+    icmp_timeout_msec: 1000
+    options: []
+  dhcpv6:
+    range_start: ""
+    lease_duration: 86400
+    ra_slaac_only: false
+    ra_allow_slaac: false
+clients: []
+log_compress: false
+log_localtime: false
+log_max_backups: 0
+log_max_size: 100
+log_max_age: 3
+log_file: ""
+verbose: false
+os:
+  group: ""
+  user: ""
+  rlimit_nofile: 0
+schema_version: 12
