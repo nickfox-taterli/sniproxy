@@ -19,5 +19,6 @@ RUN setcap 'cap_net_bind_service=+eip' /opt/AdGuardHome/AdGuardHome
 EXPOSE 53/tcp 53/udp 80/tcp 443/tcp 8080/tcp
 
 VOLUME ["/opt/AdGuardHome"]
+VOLUME ["/var/log/sniproxy"]
 
 ENTRYPOINT ["/run.sh"]
