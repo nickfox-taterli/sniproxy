@@ -17,11 +17,5 @@
 
 ## 怎么运行
 
-```shell
-docker run -d \
---network=host \
---restart unless-stopped \
--e PASSWORD=xxoo \
-taterli/sniproxy
-```
+自己猜
 
