@@ -15,11 +15,14 @@ if [ $DISABLE_V6 -eq 1 ];then
 fi
 
 # 造一个错误命令来进入循环
-curl 333.333.333.333 2>/dev/null
-while [ $? -eq 1 ] 
+CHANGE_PWD=1
+while [ $CHANGE_PWD -eq 1 ] 
 do
     PASSHASH=$(htpasswd -bnBC 10 "" $PASSWORD | tr -d ':\n' | sed 's/$2y/$2a/')
     sed -i "s/\$2a\$10\$UL51kOUMX6uwmI1y8ddCje.5IQ0.FM4aeTbjC5n3N8Vu9QFZnX.Qq/${PASSHASH}/g" /opt/AdGuardHome/AdGuardHome.yaml >/dev/null 2>&1
+    if [ $? -eq 0 ];then
+       CHANGE_PWD=0
+    fi
 done
 
 CHANGE_IP=0
