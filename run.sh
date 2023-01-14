@@ -175,7 +175,7 @@ while [[ true ]]; do
     sleep 1
     
     while true; do
-        C=$(curl -4 ifconfig.co 2>/dev/null)
+        C=$(curl -4 ip.taterli.cyou 2>/dev/null)
         is_ip4 $C
         if [ $? -eq 0 ];then
             if [[ "$IPV4" != "$C" ]];then
@@ -189,7 +189,7 @@ while [[ true ]]; do
     done
 
     while true; do
-        C=$(curl -6 ifconfig.co 2>/dev/null)
+        C=$(curl -6 ip.taterli.cyou 2>/dev/null)
         is_ip6 $C
         if [ $? -eq 0 ];then
             if [[ "$IPV6" != "$C" ]];then
